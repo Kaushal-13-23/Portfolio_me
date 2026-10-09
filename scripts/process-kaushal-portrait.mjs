@@ -4,21 +4,21 @@ import { mkdirSync, copyFileSync } from 'node:fs';
 const OUT = 'public/assets';
 mkdirSync(OUT, { recursive: true });
 
-const srcImage = 'C:/Users/hp/.gemini/antigravity-ide/brain/f9123658-b888-4ee9-bf10-8b7d6eb93af8/kaushal_portrait_1791553537337.jpg';
+const uploadedPhoto = 'C:/Users/hp/.gemini/antigravity-ide/brain/f9123658-b888-4ee9-bf10-8b7d6eb93af8/.user_uploaded/media_1791569691142.jpg';
 
 // Save source photo
-copyFileSync(srcImage, 'pic1.jpeg');
+copyFileSync(uploadedPhoto, 'pic1.jpeg');
 
-// Generate WebP portraits at different widths
+// Generate transparent WebP portraits from pic.png (the clean cutout)
 for (const w of [1100, 720, 420]) {
-  await sharp(srcImage)
+  await sharp('pic.png')
     .resize({ width: w })
-    .webp({ quality: 90 })
+    .webp({ quality: 92, alphaQuality: 95 })
     .toFile(`${OUT}/portrait-${w}.webp`);
 }
 
-// Generate social share image (1200x630) on a dark cinematic backdrop
-const portrait = await sharp(srcImage)
+// Generate social share image (1200x630) with the real cutout on dark cinematic backdrop
+const portrait = await sharp('pic.png')
   .resize({ height: 580 })
   .png()
   .toBuffer();
@@ -45,7 +45,7 @@ await sharp({
         <rect width="1200" height="630" fill="url(#g)"/>
       </svg>`),
     },
-    { input: portrait, top: 25, left: 700 },
+    { input: portrait, top: 25, left: 660 },
     {
       input: Buffer.from(`<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
         <text x="70" y="270" font-family="Impact, 'Arial Narrow', sans-serif" font-size="110" fill="#f4f1ec" letter-spacing="4">KAUSHAL</text>
@@ -58,4 +58,4 @@ await sharp({
   .jpeg({ quality: 90 })
   .toFile(`${OUT}/og-image.jpg`);
 
-console.log('Kaushal portraits and OG image generated successfully!');
+console.log('Real photo processed into WebP portraits and OG image successfully!');
