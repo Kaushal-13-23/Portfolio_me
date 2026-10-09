@@ -96,11 +96,11 @@ export function ProjectArt({ project, className = '' }: { project: Project; clas
 /** Small fictional platform mark used in the nav and on cards. */
 export function SeriesMark({ className = '' }: { className?: string }) {
   return (
-    <span className={`inline-flex items-center gap-1.5 ${className}`}>
-      <svg viewBox="0 0 24 32" className="h-[1.1em] w-auto" aria-hidden>
+    <span className={`inline-flex items-center gap-2 ${className}`}>
+      <svg viewBox="0 0 24 32" className="h-[1.15em] w-auto shrink-0" aria-hidden>
         <path d="M5 4 v24 M19 5 L5 16 L19 27" fill="none" stroke="#e5132b" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
-      <span className="font-sans text-[0.62em] font-bold tracking-[0.36em] text-mist">SERIES</span>
+      <span className="font-sans text-[0.72em] font-bold tracking-[0.24em] text-bone">KAUSHAL</span>
     </span>
   );
 }

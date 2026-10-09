@@ -1,7 +1,7 @@
-# KAUSHAL — THE SERIES
+# KAUSHAL KUMAR SINGH — PORTFOLIO
 
-A cinematic, streaming-inspired portfolio for **Kaushal Kumar Singh**: Student Leader, Campus Community Builder & Event Coordinator at Presidency University, Bengaluru.
-Every section is an episode, every leadership milestone is an Original, and the whole site plays like a series.
+A cinematic, interactive portfolio for **Kaushal Kumar Singh**: Student Leader, Campus Community Builder & Event Coordinator at Presidency University, Bengaluru.
+Every section highlights leadership milestones, club presidency, and campus initiatives in an immersive showcase.
 
 > A personal portfolio with a fictional streaming-platform look. It is not affiliated with Netflix or any other streaming service and uses none of their logos.
 

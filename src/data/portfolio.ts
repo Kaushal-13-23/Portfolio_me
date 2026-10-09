@@ -10,13 +10,15 @@ export const profile = {
   fullName: 'Kaushal Kumar Singh',
   displayName: 'Kaushal Kumar Singh',
   firstName: 'KAUSHAL',
-  seriesTag: 'THE SERIES',
+  seriesTag: '',
   /** Fictional studio card shown at the very start of the opening sequence. */
-  originalLabel: 'A KAUSHAL ORIGINAL',
+  originalLabel: 'PRESIDENCY UNIVERSITY • STUDENT LEADERSHIP',
   role: 'Student Leader & Event Coordinator',
   tagline: ['Student Leader', 'Campus Community Builder', 'Event Coordinator'],
+  shortBio:
+    'Student leader, campus community builder, and President of CogniCore & Metaverse Society Club at Presidency University — leading 58+ university and community events.',
   intro:
-    'Third-year Bachelor of Computer Applications student at Presidency University, Bengaluru, with strong experience in student leadership, campus engagement, event coordination, community building, and media activities. Currently serving as the President of CogniCore Club and Metaverse Society Club, with experience coordinating 30+ university events and 28+ NSS events.',
+    'Third-year BCA student at Presidency University, Bengaluru, serving as President of CogniCore Club & Metaverse Society Club, with experience coordinating 30+ university events and 28+ NSS events across campus.',
   location: 'Bengaluru, Karnataka, India',
   phone: '8797786686',
   email: 'kaushalkumarsingh.7239@gmail.com',
@@ -587,7 +589,7 @@ export const viewerProfiles: {
   {
     id: 'kaushal',
     name: 'Kaushal',
-    blurb: 'The full series, in order',
+    blurb: 'The full story, in order',
     color: '#e5132b',
     order: ['about', 'journey', 'originals', 'picks', 'skills', 'moments', 'story'],
   },

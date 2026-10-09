@@ -4,7 +4,6 @@ import { achievements, profile, type ProfileId } from '../data/portfolio';
 import { useFinePointer } from '../hooks/useMedia';
 import { useSmoothScroll } from '../hooks/smoothScroll';
 import { EASE, Magnetic, Particles } from './fx';
-import { SeriesMark } from './Poster';
 
 const container = { hidden: {}, show: { transition: { staggerChildren: 0.09, delayChildren: 0.25 } } };
 const item = {
@@ -74,11 +73,11 @@ export default function Hero({ onPlay, onResume, profileId }: { onPlay: () => vo
 
       {/* portrait */}
       <motion.div
-        className="absolute inset-x-0 top-12 z-[2] flex h-[64svh] items-end justify-center sm:h-[70svh] lg:bottom-0 lg:left-auto lg:right-[3vw] lg:top-20 lg:h-auto lg:w-[54vw] xl:right-[6vw] xl:w-[48vw]"
+        className="absolute inset-x-0 top-12 z-[2] flex h-[66svh] items-end justify-center sm:h-[72svh] lg:bottom-0 lg:left-auto lg:right-[3vw] lg:top-12 lg:h-auto lg:w-[54vw] xl:right-[6vw] xl:w-[48vw]"
         style={{ y: imgY, scale: imgScale, opacity: fade }}
       >
         <motion.div
-          className="relative h-full w-full lg:h-[86vh]"
+          className="relative h-full w-full lg:h-[90vh]"
           style={{ rotateY: imgRotY, rotateX: imgRotX, x: imgShiftX, transformPerspective: 1200 }}
           initial={{ clipPath: 'inset(100% -30% -10% -30%)', opacity: 0 }}
           animate={{ clipPath: 'inset(-30% -30% -10% -30%)', opacity: 1 }}
@@ -91,8 +90,7 @@ export default function Hero({ onPlay, onResume, profileId }: { onPlay: () => vo
             srcSet={profile.portrait.srcSet}
             sizes="(max-width: 1024px) 100vw, 54vw"
             alt={profile.portrait.alt}
-
-            className="absolute bottom-0 left-1/2 h-full w-auto max-w-none -translate-x-1/2 object-contain object-bottom drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] [mask-image:linear-gradient(to_bottom,black_62%,transparent_97%)]"
+            className="absolute bottom-0 left-1/2 h-full w-auto max-w-none -translate-x-1/2 object-contain object-bottom drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] [mask-image:linear-gradient(to_bottom,black_82%,transparent_100%)]"
           />
           {/* crimson rim light on the image edge */}
           <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_50%_at_80%_30%,rgba(255,61,90,0.16),transparent_70%)] mix-blend-screen" />
@@ -117,14 +115,11 @@ export default function Hero({ onPlay, onResume, profileId }: { onPlay: () => vo
         initial="hidden"
         animate="show"
       >
-        <motion.div variants={item} className="mb-3 text-lg">
-          <SeriesMark />
-        </motion.div>
         <motion.h1 variants={item} className="font-display leading-[0.82] tracking-[0.02em] text-bone" style={{ fontSize: 'clamp(4rem, 12vw, 11rem)' }}>
           <span className="shimmer-text">{profile.firstName}</span>
         </motion.h1>
-        <motion.p variants={item} className="mt-1 font-sans text-sm font-bold tracking-[0.62em] text-crimson-2 sm:text-base">
-          {profile.seriesTag}
+        <motion.p variants={item} className="mt-2 font-sans text-xs font-bold tracking-[0.34em] text-crimson-2 sm:text-sm">
+          {profile.role.toUpperCase()}
         </motion.p>
 
         <motion.div variants={item} className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 text-[13px] font-medium text-mist">
