@@ -1,5 +1,5 @@
 {
-  "name": "sushmita-the-series",
+  "name": "kaushal-the-series",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -20,6 +20,7 @@
     "@types/react": "18.3.20",
     "@types/react-dom": "18.3.6",
     "@vitejs/plugin-react": "4.4.1",
+    "pdf-lib": "^1.17.1",
     "sharp": "0.34.1",
     "tailwindcss": "4.1.4",
     "typescript": "5.8.3",

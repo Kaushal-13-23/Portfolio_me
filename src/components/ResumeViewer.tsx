@@ -38,7 +38,7 @@ export default function ResumeSection({ onView }: { onView: () => void }) {
             <Magnetic className="w-full">
               <a
                 href={profile.resumePdf}
-                download="Sushmita_Dasari_Resume.pdf"
+                download="Kaushal_Kumar_Singh_Resume.pdf"
                 data-cursor="link"
                 className="glass flex min-h-12 w-full items-center justify-center gap-2 rounded-md px-6 text-[15px] font-semibold text-bone transition hover:bg-white/15"
               >
@@ -48,9 +48,9 @@ export default function ResumeSection({ onView }: { onView: () => void }) {
           </div>
           <dl className="mt-8 grid grid-cols-3 gap-px overflow-hidden rounded-xl bg-white/10 text-center">
             {[
-              { v: education[0].score.replace('CGPA ', ''), k: 'CGPA' },
+              { v: '3rd', k: 'Year BCA' },
               { v: String(projects.length), k: 'Originals' },
-              { v: String(certifications.length), k: 'Certs' },
+              { v: '58+', k: 'Events' },
             ].map((s) => (
               <div key={s.k} className="bg-ink-2 px-2 py-4">
                 <dd className="font-display text-3xl leading-none text-bone">{s.v}</dd>
@@ -95,8 +95,10 @@ export function ResumeSheet() {
         <div>
           <p className="text-[10px] font-bold tracking-[0.34em] text-smoke">STARRING</p>
           <h3 className="mt-1 font-display text-[clamp(1.9rem,4.4vw,3.2rem)] leading-[0.9] tracking-wide text-bone">{profile.fullName}</h3>
+          <p className="mt-2 text-xs font-semibold tracking-wider text-crimson-2">{profile.role} • {profile.location}</p>
         </div>
         <div className="text-xs leading-relaxed text-mist sm:text-right">
+          <p className="text-bone font-medium">📞 {profile.phone}</p>
           <a href={`mailto:${profile.email}`} className="block hover:text-bone">
             {profile.email}
           </a>
@@ -104,8 +106,8 @@ export function ResumeSheet() {
             LinkedIn ↗
           </a>
           {' · '}
-          <a href={profile.links.github} target="_blank" rel="noreferrer" className="hover:text-bone">
-            GitHub ↗
+          <a href={profile.links.instagram} target="_blank" rel="noreferrer" className="hover:text-bone">
+            Instagram ↗
           </a>
         </div>
       </header>
